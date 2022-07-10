@@ -1,0 +1,892 @@
+@font-face {
+  font-family: "Muller 400";
+  src: url(../fonts/muller/MullerRegular.ttf);
+}
+
+@font-face {
+  font-family: "Muller 500";
+  src: url(../fonts/muller/MullerMedium.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 800";
+  src: url(../fonts/montserrat/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 700";
+  src: url(../fonts/montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 600";
+  src: url(../fonts/montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 500";
+  src: url(../fonts/montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat 400";
+  src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.header_nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav_li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav_li a {
+  font-family: "Muller 400";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #18191a;
+}
+
+.nav_li a:hover {
+  text-decoration: none;
+  color: #d03333;
+}
+
+.phone_link {
+  font-family: "Montserrat 600";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #18191a;
+  margin-bottom: 9px;
+}
+
+.phone_link img {
+  margin-right: 3px;
+}
+
+.phone_link:hover {
+  text-decoration: none;
+  color: #d03333;
+}
+
+.zayavka_link {
+  font-family: "Muller 500";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background: #d03333;
+  border: 1px solid #d03333;
+  border-radius: 7px;
+
+  padding: 10px 15px 5px;
+}
+
+.zayavka_link:hover {
+  color: #fff;
+}
+
+/* header2  */
+
+.header2 {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.right__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.left__header h1 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 88px;
+
+  color: #12100c;
+  max-width: 700px;
+  width: 100%;
+}
+
+.left__header p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 32px;
+  margin-top: 47px;
+  max-width: 520px;
+
+  color: rgba(18, 16, 12, 0.7);
+}
+
+.bottom__header {
+  margin-top: 31px;
+}
+
+.left__bottom a {
+  display: inline-block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  padding: 11px 17px;
+
+  color: #ffffff;
+
+  background: #fd695a;
+  border-radius: 16px;
+}
+
+.left__bottom__img {
+  margin-top: 16px;
+}
+
+.right__bottom p {
+  margin-left: 24px;
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgba(18, 16, 12, 0.7);
+
+  max-width: 265px;
+  margin-top: 0;
+}
+
+/* с нуля */
+
+.zero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.zero h2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+
+  color: #3d3d3f;
+}
+
+.cards__zero {
+  margin-top: 22px;
+}
+
+.card__zero {
+  padding: 20px 60px;
+  box-shadow: 0px 6px 12px rgb(44 22 84 / 55%);
+  border-radius: 20px;
+}
+
+.card__zero img {
+  margin: 0 auto;
+}
+
+.card__zero h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+  margin-top: 23px;
+  text-align: center;
+  color: #3d3d3f;
+}
+
+.card__zero p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #3d3d3f;
+
+  margin-top: 13px;
+
+  opacity: 0.7;
+}
+
+/* мы предлагаем */
+
+.predlag {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.predlag h4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 55px;
+  text-align: center;
+
+  color: #3d3d3f;
+}
+
+.card__pred {
+  margin-top: 50px;
+}
+
+.left__pred {
+  max-width: 572px;
+  width: 100%;
+}
+
+.left__pred h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+
+  color: #12100c;
+}
+
+.left__pred p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 21px;
+
+  color: rgba(18, 16, 12, 0.7);
+}
+
+.left__pred a {
+  background: #fd695a;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10.5px;
+  margin-top: 50px;
+
+  display: inline-block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding: 10px 32px;
+  margin-top: 50px;
+
+  color: #ffffff;
+}
+
+/* полиграфия */
+
+.poligrafia {
+  padding-top: 58px;
+  padding-bottom: 78px;
+  position: relative;
+}
+
+.poligrafia_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.poligrafia_line {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 2;
+}
+
+.poligrafia h4 {
+  font-family: "Montserrat 500";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 60px;
+  color: #18191a;
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.poligrafia h4::before {
+  content: url(img/poligrafia_3.png);
+}
+
+.card_pol {
+  border: 1px solid #bbbbbb;
+  border-radius: 0px 30px;
+  padding: 15px;
+}
+
+.pol1 {
+  position: relative;
+  width: 301px;
+  height: 232px;
+}
+
+.pol1 img {
+  position: absolute;
+  top: -38px;
+  left: -40px;
+}
+
+.pol2 {
+  position: relative;
+  width: 202px;
+  height: 231px;
+  margin-top: 83px;
+}
+
+.pol2 img {
+  position: absolute;
+  top: -80px;
+  right: -15px;
+}
+
+.pol3 {
+  position: relative;
+  width: 198px;
+  height: 191px;
+  margin-top: 43px;
+}
+
+.pol3 img {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+}
+
+.pol4 {
+  position: relative;
+  width: 215px;
+  height: 216px;
+  margin-top: 83px;
+}
+
+.pol4 img {
+  position: absolute;
+  top: -80px;
+  right: -40px;
+}
+
+.pol5 {
+  position: relative;
+  width: 209px;
+  height: 257px;
+}
+
+.pol5 img {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+}
+
+.pol6 {
+  position: relative;
+  width: 202px;
+  height: 149px;
+}
+
+.pol6 img {
+  position: absolute;
+  bottom: -100px;
+  left: -20px;
+}
+
+.pol7 {
+  position: relative;
+  width: 199px;
+  height: 285px;
+}
+
+.pol7 img {
+  position: absolute;
+  bottom: -100px;
+}
+
+.pol8 {
+  position: relative;
+  width: 302px;
+  height: 207px;
+}
+
+.pol8 img {
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+}
+
+.container_pol {
+  position: relative;
+}
+
+.pol1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pol2 {
+  position: absolute;
+  top: 0px;
+  left: 342px;
+}
+
+.pol3 {
+  position: absolute;
+  top: 0px;
+  right: 350px;
+}
+
+.pol4 {
+  position: absolute;
+  top: 0px;
+  right: 90px;
+}
+
+.pol5 {
+  position: absolute;
+  top: 250px;
+  left: 90px;
+}
+
+.pol6 {
+  position: absolute;
+  top: 330px;
+  left: 342px;
+}
+
+.pol7 {
+  position: absolute;
+  top: 257px;
+  right: 350px;
+}
+
+.pol8 {
+  position: absolute;
+  top: 337px;
+  right: 0;
+}
+
+/* иконки */
+
+.icons {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container__icons {
+  gap: 20px;
+}
+
+/* наши работы */
+
+.rabota {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.rabota h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+
+  color: #fd695a;
+}
+
+.rabota h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+
+  color: #3d3d3f;
+}
+
+.rabota__cards img {
+  max-width: 356px;
+  width: 100%;
+}
+
+.rabota__cards {
+  gap: 20px;
+}
+
+/* отзывы */
+
+.otziv {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.otziv h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+
+  color: #fd695a;
+}
+
+.otziv h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  margin-top: 16px;
+
+  color: #3d3d3f;
+}
+
+.left__card {
+  max-width: 516px;
+  width: 100%;
+}
+
+.otz {
+  background: #ffffff;
+  border-radius: 29px;
+  box-shadow: 0px 6px 12px rgb(44 22 84 / 55%);
+  padding: 33px;
+}
+
+.top__otz img {
+  margin-right: 16px;
+}
+
+.text__otz h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #3d3d3f;
+}
+
+.text__otz h6 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #3d3d3f;
+  margin-top: 8px;
+
+  opacity: 0.6;
+}
+
+.bottom__otz p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 155%;
+
+  color: #757575;
+  margin-top: 34px;
+}
+
+/* форма */
+
+.form {
+  margin-top: 80px;
+  padding-bottom: 50px;
+}
+
+.forma {
+  position: relative;
+  padding: 60px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgb(44 22 84 / 55%);
+}
+
+.img__forma {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.right__forma {
+  margin-left: 250px;
+}
+
+.right__forma h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+
+  color: #3d3d3f;
+}
+
+.text__input {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: #000;
+  background: #f2f2f2;
+  border: 1px solid #e7e7e7;
+  border-radius: 61px;
+  padding: 19px 25px;
+  display: inline-block;
+  max-width: 230px;
+}
+
+.right__forma form {
+  margin-top: 35px;
+  gap: 10px;
+}
+
+.submit {
+  max-width: 200px;
+  width: 100%;
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  width: 100%;
+
+  color: #ffffff;
+  padding: 13px 20px;
+  background: #fd695a;
+  border: 1px solid #e7e7e7;
+  border-radius: 61px;
+}
+
+/* footer  */
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.logo h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+
+  color: #3d3d3f;
+  margin-left: 14px;
+  margin-bottom: 0;
+}
+
+.one a {
+  display: block;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: #37383d;
+
+  margin-top: 15px;
+}
+
+.one img {
+  margin-right: 7px;
+}
+
+.second h6,
+.third h6,
+.fourth h6,
+.fifth h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #3d3d3f;
+}
+
+.second a,
+.third a,
+.fourth a {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 15px;
+
+  color: #666666;
+}
+
+.fifth h6 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 26px;
+
+  color: #666666;
+}
+
+.fifth form input {
+  background: #ffffff;
+  border: 1px solid rgba(179, 179, 179, 0.21);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.fifth form button {
+  background: #fd695a;
+  border-radius: 8px;
+
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+
+  color: #ffffff;
+  padding: 16px 48px;
+  max-width: 172px;
+  width: 100%;
+  margin-top: 24px;
+  border: none;
+}
+
+.footer2 {
+  padding-top: 26px;
+  padding-bottom: 40px;
+  border-top: 1px solid #757575;
+}
+
+.footer2 h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #646464;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: www.apollomedia.uz
+Sitemap: http://apollomedia.uz/sitemap.xml
