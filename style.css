@@ -329,6 +329,7 @@ body {
 .left_smm h4::before {
   content: url(img/smm_one.png);
   height: 100%;
+  margin-right: 10px;
 }
 
 .slider {
@@ -337,7 +338,7 @@ body {
   padding: 30px;
   max-width: 650px;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 .container_button {
@@ -355,6 +356,9 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  max-width: 216px;
+  text-align: center;
+  width: 100%;
 }
 
 .container_button a:hover {
@@ -433,7 +437,7 @@ body {
 
 .right_smm {
   position: absolute;
-  top: 20%;
+  top: 30%;
   right: -10%;
 }
 
@@ -537,8 +541,6 @@ body {
   font-size: 50px;
   line-height: 61px;
   color: #d03333;
-
-  margin-bottom: 150px;
   position: relative;
   z-index: 5;
   text-align: right;
@@ -582,7 +584,7 @@ body {
 }
 
 .sayt_button {
-  margin-top: 87px;
+  margin-top: 60px;
 }
 
 .sayt_button a {
@@ -596,6 +598,9 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  text-align: center;
+  max-width: 216px;
+  width: 100%;
 }
 
 .sayt_button a:hover {
@@ -627,6 +632,7 @@ body {
 
 .polig h4::before {
   content: url(img/poligrafia_3.png);
+  margin-right: 10px;
 }
 
 .cards__pol {
@@ -677,6 +683,9 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+  max-width: 206px;
+  width: 100%;
+  text-align: center;
 }
 
 .but__pol a:hover {
@@ -1189,6 +1198,10 @@ body {
 }
 
 @media (max-width: 500px) {
+  .left_smm h4::before {
+    display: none;
+  }
+
   /* бургер */
 
   .mobile_burger {
@@ -1576,10 +1589,11 @@ body {
   .slider_inner p {
     font-size: 18px;
     line-height: 25px;
+    text-align: left;
   }
 
   .smm {
-    padding-top: 170px;
+    padding-top: 190px;
     overflow: hidden;
   }
 
@@ -1592,6 +1606,7 @@ body {
     color: #d03333;
     position: relative;
     z-index: 5;
+    text-align: center;
   }
 
   .rocket {
@@ -1611,6 +1626,7 @@ body {
   }
 
   .slider {
+    margin-top: 50px;
     width: 100%;
     padding-right: 25px;
     padding-left: 25px;
@@ -1631,8 +1647,13 @@ body {
     list-style: none;
   }
 
+  .right_sayt h4:before {
+    display: none;
+  }
+
   .container_button,
   .sayt_button {
+    margin-top: 40px;
     justify-content: center !important;
   }
 
@@ -1664,8 +1685,8 @@ body {
     font-family: "Muller";
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 22px;
     color: #ffffff;
     margin-top: 50px;
   }
@@ -1737,7 +1758,8 @@ body {
     display: none;
   }
 
-  .sayt_number {
+  .sayt_number,
+  .polig h4::before {
     display: none;
   }
 
@@ -1751,6 +1773,11 @@ body {
     margin-bottom: 51px;
     position: relative;
     z-index: 5;
+    text-align: center;
+  }
+
+  .sayt {
+    min-height: 800px;
   }
 
   .left_sayt h5 {
@@ -1773,12 +1800,21 @@ body {
 
   .polig h4,
   .left__pol h3 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .cards__pol {
+    margin-top: 30px;
   }
 
   .but__pol a {
     margin-top: 10px;
+  }
+
+  .left__pol p {
+    font-size: 18px;
+    line-height: 22px;
   }
 
   /* полиграфия */
@@ -1868,14 +1904,15 @@ body {
 
   .seo_section {
     margin-top: 0;
-    padding-top: 160px;
+    padding-top: 180px;
     padding-bottom: 50px;
+    min-height: 800px;
   }
 
   .left_seo h3 {
     margin-top: 80px;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 28px;
+    line-height: 30px;
   }
 
   .seo {

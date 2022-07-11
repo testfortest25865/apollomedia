@@ -401,10 +401,24 @@ body {
   border-radius: 15px;
   padding: 33px 15px;
   margin-top: 20px;
+  position: relative;
 }
 
-.card__dalaem:hover {
-  box-shadow: 0px 10px 0 0 rgba(253, 106, 90, 0.7);
+.card__dalaem span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 15px;
+  padding: 33px 15px;
+  text-align: center;
+}
+
+.card__dalaem:hover span {
+  opacity: 1;
+  background: rgba(253, 106, 90);
 }
 
 .card__dalaem img {
@@ -1256,7 +1270,7 @@ body {
     z-index: 5;
   }
 
-  .a__2{
+  .a__2 {
     margin-top: 10px;
   }
 
@@ -1322,12 +1336,15 @@ body {
     justify-content: center;
   }
 
-  .left__delaem h4 {
+  .left__delaem h4,
+  .left__nas h3,
+  .rabota h3,
+  .otziv h3 {
     font-family: "Muller";
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 40px;
     color: #3d3d3f;
     margin-top: 10px;
   }
@@ -1610,6 +1627,10 @@ body {
 
   /* слайдер */
 
+  .otz{
+    margin-top: 20px;
+  }
+
   .slider_port {
     padding-left: 0px;
   }
@@ -1617,6 +1638,10 @@ body {
   .slide_inner img {
     display: block;
     margin: 0 auto;
+  }
+
+  .form{
+    margin-top: 30px;
   }
 
   /* footer  */
@@ -1635,16 +1660,40 @@ body {
 
   .second,
   .third,
-  .fourth{
-    display: none!important ;
+  .fourth {
+    display: none !important ;
   }
 
-  .footer .container{
-    justify-content: center!important;
+  .footer .container {
+    justify-content: center !important;
   }
 
-  .fifth{
+  .fifth {
     margin-top: 50px;
     /* text-align: center; */
+  }
+
+  .one a {
+    justify-content: center;
+  }
+
+  .fifth h5,
+  .fifth h6 {
+    text-align: center;
+  }
+
+  .fifth form button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .footer2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .footer2 h5{
+    text-align: center;
   }
 }
